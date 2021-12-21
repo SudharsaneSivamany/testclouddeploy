@@ -1,0 +1,9 @@
+
+base
+  - ../../base
+
+
+nameprefix: dev-
+
+commonLabels:
+  env: dev

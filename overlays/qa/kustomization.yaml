@@ -1,0 +1,9 @@
+
+base
+  - ../../base
+
+
+nameprefix: qa-
+
+commonLabels:
+  env: qa
