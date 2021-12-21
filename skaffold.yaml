@@ -6,8 +6,8 @@ profiles:
       kustomize:
         paths:
           - env/dev
-  - name: prod
+  - name: qa
     deploy:
       kustomize:
         paths:
-          - env/prod
+          - env/qa

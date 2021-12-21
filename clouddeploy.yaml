@@ -8,9 +8,9 @@ serialPipeline:
  - targetId: devtarget
    profiles: 
    - dev
- - targetId: prodtarget
+ - targetId: qatarget
    profiles:
-   - prod
+   - qa
 ---
 apiVersion: deploy.cloud.google.com/v1beta1
 kind: Target
@@ -23,8 +23,8 @@ gke:
 apiVersion: deploy.cloud.google.com/v1beta1
 kind: Target
 metadata:
- name: prodtarget
-description: production namespace
+ name: qatarget
+description: qa namespace
 gke:
  cluster: projects/dc-hughes-anthos-migration-two/locations/us-central1-c/clusters/qa
  #requireApproval: true

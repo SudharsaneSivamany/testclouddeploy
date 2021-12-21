@@ -4,9 +4,3 @@ base
 
 
 namespace: qa
-
-commonLabels:
-  env: qa
-
-patches:
-  - replica.yaml
