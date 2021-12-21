@@ -1,9 +1,0 @@
-
-base
-  - ../../base
-
-
-nameprefix: prod-
-
-commonLabels:
-  env: prod

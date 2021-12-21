@@ -3,7 +3,10 @@ base
   - ../../base
 
 
-nameprefix: dev-
+namespace: dev
 
 commonLabels:
   env: dev
+
+patches:
+  - replica.yaml      

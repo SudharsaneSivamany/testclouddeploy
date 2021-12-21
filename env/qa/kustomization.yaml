@@ -3,7 +3,10 @@ base
   - ../../base
 
 
-nameprefix: qa-
+namespace: qa
 
 commonLabels:
   env: qa
+
+patches:
+  - replica.yaml
