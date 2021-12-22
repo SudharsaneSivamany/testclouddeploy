@@ -1,0 +1,30 @@
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: DeliveryPipeline
+metadata:
+ name: cloud-deploy-kus
+description: main application pipeline
+serialPipeline:
+ stages:
+ - targetId: devtarget
+   profiles: 
+   - dev
+ - targetId: qatarget
+   profiles:
+   - qa
+---
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: Target
+metadata:
+ name: devtarget
+description: development namespace
+gke:
+ cluster: projects/dc-hughes-anthos-migration/locations/us-central1-c/clusters/dev
+---
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: Target
+metadata:
+ name: qatarget
+description: qa namespace
+gke:
+ cluster: projects/dc-hughes-anthos-migration-two/locations/us-central1-c/clusters/qa
+ #requireApproval: true
