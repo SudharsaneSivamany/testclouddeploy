@@ -1,7 +1,7 @@
 steps:
 #Build the image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us.gcr.io/dc-hughes-anthos-migration/mytestapp:${TAG_NAME}', '.',  '-f', 'Dockerfile']
+    args: ['build', '-t', 'us.gcr.io/dc-hughes-anthos-migration/mytestapp:${TAG_NAME}', '.',  '-f', 'ci/Dockerfile']
     timeout: 180s
 
 #Push the image
