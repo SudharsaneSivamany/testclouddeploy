@@ -3,3 +3,6 @@ bases:
 
 
 namespace: dev
+vars:
+  - name: myweb
+    value: googlepoc
