@@ -1,5 +1,6 @@
 resources:
   - k8s.yaml
   - service.yaml
+  - values.yaml
 commonLabels:
   demo: cloud-deploy

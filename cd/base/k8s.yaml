@@ -3,8 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: $(myweb)
-  name: $(myweb)
+    app: myweb
+  name: $(Values.file1.spec.name)
 spec:
   replicas: 2
   selector:
