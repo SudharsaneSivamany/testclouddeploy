@@ -6,8 +6,8 @@ namespace: dev
 vars:
 - name: myweb
   objref:
-     kind: deployment
+     kind: data
      name: googlepoc
-     apiVersion: apps/v1
+     apiVersion: v1
   fieldref:
      fieldpath: metadata.name
