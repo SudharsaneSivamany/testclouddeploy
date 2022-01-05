@@ -4,5 +4,5 @@ bases:
 
 namespace: dev
 vars:
-  - name: myweb
+    name: myweb
     value: googlepoc
