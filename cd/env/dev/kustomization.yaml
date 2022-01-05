@@ -3,11 +3,10 @@ bases:
 
 
 namespace: dev
-vars:
-- name: myweb
-  objref:
-     kind: data
-     name: googlepoc
-     apiVersion: v1
-  fieldref:
-     fieldpath: metadata.name
+patchesJson6902:
+- target:
+    group: ''
+    version: v1
+    kind: Values
+    name: file1
+  path: value_var.yaml
