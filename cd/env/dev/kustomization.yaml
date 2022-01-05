@@ -9,3 +9,5 @@ vars:
      kind: deployment
      name: googlepoc
      apiVersion: apps/v1
+  fieldref:
+     fieldpath: metadata.name
