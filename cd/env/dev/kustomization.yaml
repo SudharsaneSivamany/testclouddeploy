@@ -4,5 +4,8 @@ bases:
 
 namespace: dev
 vars:
-    name: myweb
-    value: googlepoc
+- name: myweb
+  objref:
+     kind: deployment
+     name: googlepoc
+     apiVersion: apps/v1
