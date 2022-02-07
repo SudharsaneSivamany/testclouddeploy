@@ -5,6 +5,6 @@ steps:
     args:
      - '-c'
      - >
-       gcloud beta deploy releases create rel-$(date +%y%m%d-%s)
+       gcloud deploy releases create rel-$(date +%y%m%d-%s)
        --delivery-pipeline=cloud-deploy-helm
        --region=us-central1
