@@ -8,5 +8,5 @@ profiles:
     - name: test
       chartPath: helm/project
       namespace: test
-      valuesFile:
+      valuesFiles:
        - "helm/project/dev-values.yaml"
