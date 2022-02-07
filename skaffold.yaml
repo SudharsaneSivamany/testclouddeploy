@@ -5,7 +5,7 @@ profiles:
   deploy:
    helm:
     releases: 
-    - name: test-app
+    - name: test
       chartPath: helm/project
       namespace: test
       valuesFile:
