@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: v3
 name: test
 version: 1.0.0
 kubeVersion: ""
