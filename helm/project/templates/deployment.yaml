@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{.Values.NAME}}
+  name: {{.Values.NAME}}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: {{.Values.NAME}}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.NAME}}
+    spec:
+      containers:
+      - image: {{.Values.IMAGE}}
+        imagePullPolicy: Always
+        name: {{.Values.NAME}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: {{.Values.NAME}}
+  name: {{.Values.NAME}}
+spec:
+  ports:
+  - nodePort: 32223
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: {{.Values.NAME}}
+  type: LoadBalancer
