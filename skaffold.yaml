@@ -1,13 +1,12 @@
 apiVersion: skaffold/v2beta16
 kind: Config
 profiles:
-  - name: dev
-    deploy:
-      kustomize:
-        paths:
-          - cd/base
-  - name: qa
-    deploy:
-      kustomize:
-        paths:
-          - cd/env/qa
+- name: test
+  deploy:
+   helm:
+    releases: 
+    - name: test-app
+      chartPath: helm/project
+      namespace: test
+      valuesFile:
+       - "helm/project/dev-values.yaml"
