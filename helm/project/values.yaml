@@ -1,2 +1,2 @@
-NAME="home-app"
-IMAGE="gcr.io/dc-hughes-anthos-migration/myapp:sample"
+NAME: "home-app"
+IMAGE: "gcr.io/dc-hughes-anthos-migration/myapp:sample"
