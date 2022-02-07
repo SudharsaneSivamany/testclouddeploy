@@ -6,7 +6,6 @@ profiles:
    helm:
     releases: 
     - name: test
-      chartPath: helm/project
       namespace: test
       valuesFiles:
-      - values.yaml
+      - helm/project/values.yaml
