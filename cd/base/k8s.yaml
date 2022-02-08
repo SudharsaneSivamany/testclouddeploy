@@ -1,10 +1,9 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app: myweb
-  name: $(Values.file1.spec.name)
+  name: myweb
 spec:
   replicas: 2
   selector:
@@ -16,6 +15,6 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: myapp-image
+      - image: nginx
         imagePullPolicy: Always
         name: myweb
