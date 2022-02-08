@@ -2,7 +2,7 @@ bases:
   - ../../base
 
 
-namespace: dev
+namespace: test
 patchesJson6902:
 - target:
     group: ''
