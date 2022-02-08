@@ -9,4 +9,4 @@ profiles:
     hooks:
      before:
       host:
-       command: ["sh", "-c", "kubectl", "get", "ns"]
+       command: ["sh", "-c", "kubectl", "get", "all", "-n", "test"]
