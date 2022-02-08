@@ -3,10 +3,10 @@ kind: Config
 profiles:
 - name: test
   deploy:
-   helm:
-    releases: 
-    - name: test
-      chartPath: helm/project
-      namespace: test
-      valuesFiles:
-      - helm/project/values.yaml
+   kustmoize:
+    paths:
+     - cd/env/dev
+    hooks:
+     before:
+      host:
+       command: ["sh", "-c", "kubectl", "get", "ns"]
