@@ -1,11 +1,9 @@
 steps:
-  
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: bash
     args:
      - '-c'
      - >
-       pwd
        gcloud deploy releases create rel-$(date +%y%m%d-%s)
        --delivery-pipeline=cloud-deploy-helm
        --region=us-central1
