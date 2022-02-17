@@ -1,11 +1,11 @@
 - op: replace
   path: /metadata/name
-  value: googlepoc0
+  value: googlepoc1
 - op: replace
   path: /spec/template/spec/containers/0/envFrom/0/configMapRef
   value: 
    name: configmap1
 - op: replace
   path: /spec/template/spec/containers/0/envFrom/1/configMapRef
-  value:
-   name: configmap2 
+  value: 
+   name: configmap3 

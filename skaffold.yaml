@@ -1,12 +1,12 @@
 apiVersion: skaffold/v2beta26
 kind: Config
+metadata:
+ name: skaffold-poc
 profiles:
 - name: test
+  activation:
+  - command: deploy
   deploy:
-   kustmoize:
-    paths:
-     - cd/env/dev
-    hooks:
-     before:
-      host:
-       command: ["sh", "-c", "kubectl", "get", "all", "-n", "test"]
+    kustomize:
+      paths:
+      - cd/env/qa

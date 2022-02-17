@@ -1,6 +1,26 @@
-
 bases:
   - ../../base
 
 
-namespace: qa
+namespace: test
+patchesJson6902:
+- target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: myweb
+  path: value_var.yaml
+
+configMapGenerator:
+- name: configmap1
+  options:
+   disableNameSuffixHash: true
+  files:
+  - 1.sh
+  - 2.sh
+- name: configmap3
+  options:
+   disableNameSuffixHash: true
+  files:
+  - 3.sh
+  - 4.sh

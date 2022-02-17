@@ -18,8 +18,3 @@ spec:
       - image: nginx
         imagePullPolicy: Always
         name: myweb
-        envFrom:
-        - configMapRef:
-            name: cm
-        - configMapRef:
-            name: cm

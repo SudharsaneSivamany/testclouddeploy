@@ -10,3 +10,17 @@ patchesJson6902:
     kind: Deployment
     name: myweb
   path: value_var.yaml
+
+configMapGenerator:
+- name: configmap1
+  options:
+   disableNameSuffixHash: true
+  files:
+  - 1.sh
+  - 2.sh
+- name: configmap2
+  options: 
+   disableNameSuffixHash: true
+  files:
+  - 3.sh
+  - 4.sh

@@ -16,3 +16,7 @@ metadata:
 description: development namespace
 gke:
  cluster: projects/dc-hughes-anthos-migration/locations/us-central1-c/clusters/dev
+executionConfigs:
+- usages:
+  - RENDER
+  - DEPLOY

@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hook-preinstall
+  annotations:
+    "helm.sh/hook": "pre-install"
+  namespace: test
+spec:
+  template:
+   spec:
+    containers:
+    - name: hook1-container
+      image: busybox
+      imagePullPolicy: IfNotPresent
+      command: ['sh', '-c', 'echo The pre-install hook Pod is running  - hook-preinstall && sleep 15']
+    restartPolicy: Never
