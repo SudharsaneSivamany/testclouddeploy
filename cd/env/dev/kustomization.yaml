@@ -16,10 +16,10 @@ configMapGenerator:
   options:
    disableNameSuffixHash: true
   files:
-  - ${WORKSPACE}/DSS/config/config.sh
+  - /workspace/source/DSS/config/config.sh
 - name: j2p9-config-file
   options: 
    disableNameSuffixHash: true
   files:
-  - ${WORPSPACE}/DSS/config/config.sh
-  - ${WORKSPACE}/DSS/config/environ.sh
+  - /workspace/source/DSS/config/config.sh
+  - /workspace/source/DSS/config/environ.sh
