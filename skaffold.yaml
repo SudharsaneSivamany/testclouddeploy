@@ -9,4 +9,4 @@ profiles:
   deploy:
     kustomize:
       paths:
-      - cd/env/qa
+      - cd/env/dev

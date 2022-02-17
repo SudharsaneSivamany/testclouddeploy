@@ -12,15 +12,14 @@ patchesJson6902:
   path: value_var.yaml
 
 configMapGenerator:
-- name: configmap1
+- name: j2p9-env-var
   options:
    disableNameSuffixHash: true
   files:
-  - 1.sh
-  - 2.sh
-- name: configmap2
+  - /workspace/DSS/config/config.sh
+- name: j2p9-config-file
   options: 
    disableNameSuffixHash: true
   files:
-  - 3.sh
-  - 4.sh
+  - /workspace/DSS/config/config.sh
+  - /workspace/DSS/config/environ.sh
